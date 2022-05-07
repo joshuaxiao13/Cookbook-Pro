@@ -22,7 +22,7 @@ const AddRecipeModal = ({ username, pushRecipe }) => {
       'difficulty',
     ].map((field) => formData.get(field));
     axios
-      .post(`/api/v1/users/${username}`, {
+      .post(`${process.env.API_URL}/api/v1/users/${username}`, {
         recipe: {
           name,
           time,
