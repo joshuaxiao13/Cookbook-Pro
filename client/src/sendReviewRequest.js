@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const sendReviewRequest = (username, recipe) => {
   axios
-    .post('/api/v1/moderator', {
+    .post(`${process.env.API_URL}/api/v1/moderator`, {
       recipe: { ...recipe, username },
     })
     .then((res) => {})

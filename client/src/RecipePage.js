@@ -8,7 +8,7 @@ const RecipePage = ({ user }) => {
   const { id } = useParams();
   useEffect(() => {
     axios
-      .get(`/api/v1/users/${user.username}`)
+      .get(`${process.env.API_URL}/api/v1/users/${user.username}`)
       .then((res) => {
         setRecipe(res.data.user.recipes.find((rec) => rec._id == id));
       })

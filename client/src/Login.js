@@ -13,7 +13,7 @@ const Login = ({ login }) => {
     const username = formData.get('username');
     const password = formData.get('password');
     axios
-      .patch('/api/v1/users/login', {
+      .patch(`${process.env.API_URL}/api/v1/users/login`, {
         username,
         password,
         previous_login: new Date(),
