@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const users = require('./routes/users');
 const moderator = require('./routes/moderator');
 const mongoose = require('mongoose');
@@ -7,6 +8,7 @@ require('dotenv').config();
 
 // middleware
 app.use(express.json());
+app.use(cors());
 
 // routes
 app.use('/api/v1/users', users);
