@@ -98,7 +98,8 @@ const Signup = ({ login }) => {
             </Form.Text>
           ) : (
             <Form.Text style={{ color: 'red' }}>
-              No spaces allowed in username and password
+              No spaces allowed in username and password. Username may already
+              exist.
             </Form.Text>
           )}
         </Form.Group>
