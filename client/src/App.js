@@ -14,7 +14,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const App = () => {
   const [user, setUser] = useState(null);
-  console.log(process.env.API_URL);
+
   return (
     <>
       <BrowserRouter>

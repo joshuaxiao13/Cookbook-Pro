@@ -7,8 +7,8 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 // middleware
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
 
 // routes
 app.use('/api/v1/users', users);
