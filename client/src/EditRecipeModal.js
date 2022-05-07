@@ -22,7 +22,7 @@ const EditRecipeModal = ({ username, recipe, setRecipes }) => {
       'difficulty',
     ].map((field) => formData.get(field));
     axios
-      .patch(`${process.env.API_URL}/api/v1/users/${username}`, {
+      .patch(`${process.env.REACT_APP_API_KEY}/api/v1/users/${username}`, {
         id: recipe._id,
         updatedRecipe: {
           name,

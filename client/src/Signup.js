@@ -17,7 +17,7 @@ const Signup = ({ login }) => {
       'password',
     ].map((field) => formData.get(field));
     axios
-      .post(`${process.env.API_URL}/api/v1/users`, {
+      .post(`${process.env.REACT_APP_API_KEY}/api/v1/users`, {
         name,
         email,
         username,

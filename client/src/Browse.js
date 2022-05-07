@@ -11,7 +11,7 @@ const Browse = () => {
 
   useEffect(() => {
     axios
-      .get(`${process.env.API_URL}/api/v1/users/public`)
+      .get(`${process.env.REACT_APP_API_KEY}/api/v1/users/public`)
       .then((res) => {
         setRecipes(res.data.user.recipes);
         setLoading(false);

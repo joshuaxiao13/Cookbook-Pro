@@ -16,7 +16,7 @@ const Cookbook = ({ user }) => {
 
   useEffect(() => {
     axios
-      .get(`${process.env.API_URL}/api/v1/users/${user.username}`)
+      .get(`${process.env.REACT_APP_API_KEY}/api/v1/users/${user.username}`)
       .then((res) => {
         setRecipes(res.data.user.recipes);
         setLoading(false);
