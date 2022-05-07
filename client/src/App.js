@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import MyNavbar from './Navbar';
 import Login from './Login';
 import Signup from './Signup';
@@ -17,7 +17,7 @@ const App = () => {
 
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <MyNavbar user={user} logout={setUser} />
         <div style={{ height: '58px' }} />
         <Routes>
@@ -56,7 +56,7 @@ const App = () => {
             }
           />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 };
