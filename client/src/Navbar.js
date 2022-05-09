@@ -20,7 +20,7 @@ const MyNavbar = ({ user, logout }) => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='responsive-navbar-nav'>
-            <Nav className='flex-grow-1 pe-3'>
+            <Nav className='justify-content-left-evenly flex-grow-1'>
               <div>
                 <Link
                   to='/browse'
