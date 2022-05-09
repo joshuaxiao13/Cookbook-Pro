@@ -2,7 +2,6 @@ const _ = require('lodash');
 const Users = require('../models/users');
 
 const getUsers = async (req, res) => {
-  console.log('getUsers');
   try {
     const users = await Users.find({});
     let users_hidden = Object.entries(users).map(([key, value]) => {
@@ -19,7 +18,6 @@ const getUsers = async (req, res) => {
 };
 
 const getSingleUser = async (req, res) => {
-  console.log('getSingleUser');
   const { username } = req.params;
   try {
     const user = await Users.findOne({ username });
@@ -37,7 +35,6 @@ const getSingleUser = async (req, res) => {
 };
 
 const createUser = async (req, res) => {
-  console.log(createUser);
   try {
     const user = await Users.create(req.body);
     res.status(201).json({ user });
@@ -52,9 +49,7 @@ const createUser = async (req, res) => {
 };
 
 const loginUser = async (req, res) => {
-  console.log(loginUser);
   const { username, password } = req.body;
-  console.log('attempting login', username, password);
   try {
     const user = await Users.findOneAndUpdate(
       { username, password },
@@ -75,13 +70,10 @@ const loginUser = async (req, res) => {
 };
 
 const addRecipe = async (req, res) => {
-  console.log('addRecipe');
   try {
-    console.log(req.params.username);
     const user = await Users.findOne({ username: req.params.username });
     user.recipes.push(req.body.recipe);
     const updated = await user.save();
-    console.log(updated);
     res.status(201).json({ recipes: updated.recipes });
   } catch (error) {
     return res.status(500).json({ msg: error });
@@ -89,7 +81,6 @@ const addRecipe = async (req, res) => {
 };
 
 const deleteRecipe = async (req, res) => {
-  console.log('deleteRecipe');
   try {
     const user = await Users.findOne({ username: req.params.username });
     for (let i = 0; i < user.recipes.length; ++i) {
@@ -106,7 +97,6 @@ const deleteRecipe = async (req, res) => {
 };
 
 const updateRecipe = async (req, res) => {
-  console.log('updateRecipe');
   try {
     const user = await Users.findOne({ username: req.params.username });
     for (let i = 0; i < user.recipes.length; ++i) {

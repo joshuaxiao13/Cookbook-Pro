@@ -19,7 +19,6 @@ const createReviewRequest = async (req, res) => {
 };
 
 const deleteReviewRequest = async (req, res) => {
-  console.log(req.body.recipe);
   try {
     const queue = await Moderator.deleteMany({ recipe: req.body.recipe });
     res.status(201).json({ msg: 'success', queue });
