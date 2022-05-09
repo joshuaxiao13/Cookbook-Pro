@@ -23,7 +23,7 @@ const Browse = () => {
 
   if (loading) {
     return (
-      <div style={{ display: 'flex', justifyContent: 'center', margin: '20%' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', margin: '15%' }}>
         <h1>Loading...</h1>
       </div>
     );

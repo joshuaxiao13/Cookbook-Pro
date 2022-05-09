@@ -31,11 +31,12 @@ const Login = ({ login }) => {
   return (
     <div
       style={{
-        padding: '15rem',
+        margin: 'auto',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
+        marginTop: '10%',
       }}
     >
       <h1>Login</h1>

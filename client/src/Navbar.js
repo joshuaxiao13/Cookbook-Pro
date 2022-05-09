@@ -18,15 +18,10 @@ const MyNavbar = ({ user, logout }) => {
               Cookbook Pro
             </Link>
           </Navbar.Brand>
+          <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='responsive-navbar-nav'>
             <Nav className='me-auto'>
-              <div
-                style={{
-                  minWidth: '120%',
-                  display: 'flex',
-                  justifyContent: 'space-around',
-                }}
-              >
+              <div>
                 <Link
                   to='/browse'
                   style={{ textDecoration: 'none', color: 'black' }}
@@ -43,7 +38,7 @@ const MyNavbar = ({ user, logout }) => {
                 )}
               </div>
             </Nav>
-            <Nav>
+            <Nav className='justify-content-end flex-grow-1 pe-3'>
               {user !== null ? (
                 <NavDropdown title={user.username} id='collasible-nav-dropdown'>
                   <NavDropdown.Item
@@ -55,25 +50,19 @@ const MyNavbar = ({ user, logout }) => {
                   </NavDropdown.Item>
                 </NavDropdown>
               ) : (
-                <Nav>
-                  <div
-                    style={{
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      minWidth: '120%',
-                    }}
-                  >
+                <>
+                  <Nav className='justify-content-end flex-grow-1 pe-3'>
                     <Link
                       to='login'
                       style={{
-                        marginRight: '5%',
                         textDecoration: 'none',
                         color: 'black',
                       }}
                     >
                       Login
                     </Link>
-                    <br />
+                  </Nav>
+                  <Nav>
                     <Link
                       to='signup'
                       style={{
@@ -83,8 +72,8 @@ const MyNavbar = ({ user, logout }) => {
                     >
                       Sign Up
                     </Link>
-                  </div>
-                </Nav>
+                  </Nav>
+                </>
               )}
             </Nav>
           </Navbar.Collapse>

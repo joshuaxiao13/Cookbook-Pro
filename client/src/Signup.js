@@ -38,11 +38,12 @@ const Signup = ({ login }) => {
   return (
     <div
       style={{
-        padding: '12rem',
+        margin: 'auto',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
+        marginTop: '10%',
       }}
     >
       <h1>Create Account</h1>
