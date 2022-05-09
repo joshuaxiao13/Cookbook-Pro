@@ -28,13 +28,16 @@ const MyNavbar = ({ user, logout }) => {
                 >
                   Browse
                 </Link>
+                <Nav />
                 {user && (
-                  <Link
-                    to='mycookbook'
-                    style={{ textDecoration: 'none', color: 'black' }}
-                  >
-                    My Cookbook
-                  </Link>
+                  <Nav>
+                    <Link
+                      to='mycookbook'
+                      style={{ textDecoration: 'none', color: 'black' }}
+                    >
+                      My Cookbook
+                    </Link>
+                  </Nav>
                 )}
               </div>
             </Nav>
