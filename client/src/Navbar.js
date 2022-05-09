@@ -20,14 +20,16 @@ const MyNavbar = ({ user, logout }) => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='responsive-navbar-nav'>
-            <Nav className='justify-content-left flex-grow-1'>
-              <div>
-                <Link
-                  to='/browse'
-                  style={{ textDecoration: 'none', color: 'black' }}
-                >
-                  Browse
-                </Link>
+            <Nav className='justify-content-between flex-grow-1'>
+              <Nav>
+                <Nav className='justify-content-evenly flex-grow-1 pe-3'>
+                  <Link
+                    to='/browse'
+                    style={{ textDecoration: 'none', color: 'black' }}
+                  >
+                    Browse
+                  </Link>
+                </Nav>
                 <Nav />
                 {user && (
                   <Nav>
@@ -39,9 +41,9 @@ const MyNavbar = ({ user, logout }) => {
                     </Link>
                   </Nav>
                 )}
-              </div>
+              </Nav>
             </Nav>
-            <Nav className='justify-content-end flex-grow-1 pe-3'>
+            <Nav>
               {user !== null ? (
                 <NavDropdown title={user.username} id='collasible-nav-dropdown'>
                   <NavDropdown.Item
