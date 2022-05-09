@@ -20,14 +20,14 @@ const MyNavbar = ({ user, logout }) => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='responsive-navbar-nav'>
-            <Nav className='me-auto'>
+            <Nav className='flex-grow-1 pe-3'>
               <div>
                 <Link
                   to='/browse'
                   style={{ textDecoration: 'none', color: 'black' }}
                 >
                   Browse
-                </Link>{' '}
+                </Link>
                 {user && (
                   <Link
                     to='mycookbook'
