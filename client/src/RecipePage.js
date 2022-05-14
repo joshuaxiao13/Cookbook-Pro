@@ -53,13 +53,12 @@ const RecipePage = ({ user }) => {
       <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
         <div>
           <h3>Ingredients 🥫</h3>
-          <ul>
+          <ul style={{ listStyle: 'none' }}>
             {recipe &&
               recipe.ingredients.split(',').map((ing) => {
                 return (
                   <li>
-                    <input type='checkbox' />
-                    {ing.trim()}
+                    <input type='checkbox' /> {ing.trim()}
                   </li>
                 );
               })}
