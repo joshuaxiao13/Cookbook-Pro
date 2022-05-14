@@ -56,7 +56,12 @@ const RecipePage = ({ user }) => {
           <ul>
             {recipe &&
               recipe.ingredients.split(',').map((ing) => {
-                return <li>{ing.trim()}</li>;
+                return (
+                  <li>
+                    <input type='checkbox' />
+                    {ing.trim()}
+                  </li>
+                );
               })}
           </ul>
         </div>
