@@ -11,4 +11,4 @@ Cookbook Pro fosters a community of home cooks from all walks of life to grow th
  Find your next favourite recipe or contribute to our growing collection of recipes, the choice is yours. But whatever you choose to do, just keep on cookin'!
 
  ### Inspiration
- As a busy university student who cooks three daily meals, I needed a creative way to organize my recipes so that I could quickly reference the ingredients or instructions if I ever got lost. I also rotate between four different meals, which can get quite boring sometimes. I wanted to expand my cook book and learn new dishes from other home cooks. Cookbook Pro is the solution to these problems.
+ As a busy university student who cooks three daily meals, I needed a creative way to organize my recipes so that I could quickly reference the ingredients or instructions if I ever got lost. I also rotate between the same four meals, which can be quite boring sometimes. I wanted to expand my cook book and learn new dishes from other home cooks. Cookbook Pro is the solution to these problems.
